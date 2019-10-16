@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/txcom-ubuntu64/cmakelearn/demo5/math/MathFunctions.cc
+MathFunctions.h
+/home/txcom-ubuntu64/cmakelearn/demo5/math/MathFunctions.h
+
+/home/txcom-ubuntu64/cmakelearn/demo5/math/MathFunctions.h
+
