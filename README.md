@@ -7,8 +7,12 @@ $ sudo make install
 $ make test
 ```
 
-需要删除才能重新生成
-
+## 目录
+- [demo1 单个源文件](demo1)
+- [demo2 多个源文件](demo2)
+- [demo3 自定义编译选项](demo3)
+- [demo4 安装和测试](demo4)
+需要删除才能重新生成config.h
 ```sh
 $ sudo make install
 [sudo] password for txcom-ubuntu64: 
@@ -41,3 +45,43 @@ Test project /home/txcom-ubuntu64/cmakelearn/demo5
 
 Total Test time (real) =   0.01 sec
 ```
+
+- [demo5 支持 gdb](demo5)
+- [demo6 添加环境检查](demo6)
+- [demo7 添加版本号](demo7)
+- [demo8 生成安装包](demo8)
+```sh
+$ ./demo8-..1-Linux.sh 
+demo8 Installer Version: ..1, Copyright (c) Humanity
+This is a self-extracting archive.
+The archive will be extracted to: /home/txcom-ubuntu64/cmakelearn/demo8
+
+If you want to stop extracting, please press <ctrl-C>.
+LICENSE
+=======
+
+This is an installer created using CPack (http://www.cmake.org). No license provided.
+
+
+
+Do you accept the license? [yN]: 
+y
+By default the demo8 will be installed in:
+  "/home/txcom-ubuntu64/cmakelearn/demo8/demo8-..1-Linux"
+Do you want to include the subdirectory demo8-..1-Linux?
+Saying no will install in: "/home/txcom-ubuntu64/cmakelearn/demo8" [Yn]: 
+y
+
+Using target directory: /home/txcom-ubuntu64/cmakelearn/demo8/demo8-..1-Linux
+Extracting, please wait...
+
+Unpacking finished successfully
+
+$ cd demo8-..1-Linux/bin
+$ ./demo 2 20
+Now we use our own Math library. 
+2 ^ 20 is 1.04858e+06
+```
+
+---------
+[CMake 入门实战](https://www.hahack.com/codes/cmake/)
