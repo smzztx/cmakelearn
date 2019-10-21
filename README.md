@@ -5,6 +5,8 @@ $ cmake .	#get Makefile
 $ make		#get executable file
 $ sudo make install
 $ make test
+$ cpack -C CPackConfig.cmake
+$ cpack -C CPackSourceConfig.cmake    #生成源码安装包
 ```
 
 ## 目录
@@ -12,6 +14,7 @@ $ make test
 - [demo2 多个源文件](demo2)
 - [demo3 自定义编译选项](demo3)
 - [demo4 安装和测试](demo4)
+
 需要删除才能重新生成config.h
 ```sh
 $ sudo make install
