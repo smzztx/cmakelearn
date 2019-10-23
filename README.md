@@ -86,5 +86,18 @@ Now we use our own Math library.
 2 ^ 20 is 1.04858e+06
 ```
 
+## content2
+- 一， 初识 cmake
+```sh
+$ cmake .
+$ make
+
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+- 
 ---------
 [CMake 入门实战](https://www.hahack.com/codes/cmake/)
+[CMake实践]
