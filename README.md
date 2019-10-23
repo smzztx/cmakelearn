@@ -88,6 +88,8 @@ Now we use our own Math library.
 
 ## content2
 - 一， 初识 cmake
+- 二， 安装 cmake
+- 三， 初试 cmake – cmake 的 helloworld
 ```sh
 $ cmake .
 $ make
@@ -97,7 +99,12 @@ $ cd build
 $ cmake ..
 $ make
 ```
-- 
+- 四 ， 更好一点的 Hello World
+- 五， 静态库 与 动态库构建
+- 六， 如 何使用 外部共享库 和 头文件
+- 七， cmake 常 用 变量和 常 用 环境变量
+- 八， cmake 常 用 指令
+- 九， 复杂的 例子： 模块的 使用 和 自 定义模块
 ---------
 [CMake 入门实战](https://www.hahack.com/codes/cmake/)
-[CMake实践]
+[CMake实践]()
