@@ -105,12 +105,26 @@ $ mkdir build && cd build
 $ cmake ..
 $ make
 $ ./bin/hello
+
+$ mkdir build && cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/tmp/t2/usr ..
+$ make
+$ sudo make install
+[100%] Built target hello
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/t2/usr/share/doc/cmake/t2/COPYRIGHT
+-- Installing: /tmp/t2/usr/share/doc/cmake/t2/README
+-- Installing: /tmp/t2/usr/bin/runhello.sh
+-- Installing: /tmp/t2/usr/share/doc/cmake/t2
+-- Installing: /tmp/t2/usr/share/doc/cmake/t2/hello.txt
+
 ```
-- 五， 静态库 与 动态库构建
-- 六， 如 何使用 外部共享库 和 头文件
-- 七， cmake 常 用 变量和 常 用 环境变量
-- 八， cmake 常 用 指令
-- 九， 复杂的 例子： 模块的 使用 和 自 定义模块
+- 五， 静态库与动态库构建
+- 六， 如何使用外部共享库和头文件
+- 七， cmake 常用变量和常用环境变量
+- 八， cmake 常用指令
+- 九， 复杂的例子：模块的使用和自定义模块
 ---------
 [CMake 入门实战](https://www.hahack.com/codes/cmake/)  
 [CMake实践]()
