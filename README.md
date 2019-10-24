@@ -100,6 +100,12 @@ $ cmake ..
 $ make
 ```
 - 四 ， 更好一点的 Hello World
+```sh
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ ./bin/hello
+```
 - 五， 静态库 与 动态库构建
 - 六， 如 何使用 外部共享库 和 头文件
 - 七， cmake 常 用 变量和 常 用 环境变量
