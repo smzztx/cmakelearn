@@ -121,7 +121,41 @@ Install the project...
 
 ```
 - 五， 静态库与动态库构建
+
+when i add
+`ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
+ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})`
+i get libhello.a
+
+when i add 
+`ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
+ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})
+SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")`
+i get libhello.a and libhello.so
+
+when i add 
+`SET(LIBHELLO_SRC hello.c)
+ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
+ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})
+SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")
+SET_TARGET_PROPERTIES(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)`
+i get the same result as 2
 - 六， 如何使用外部共享库和头文件
+```sh
+#link to libhello.so
+$ ldd src/main 
+	linux-vdso.so.1 =>  (0x00007fff2ff99000)
+	libhello.so.1 => /usr/local/lib/libhello.so.1 (0x00007f0e251a8000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f0e24ddf000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f0e253aa000)
+    
+#link to libhello.a
+$ ldd src/main 
+	linux-vdso.so.1 =>  (0x00007ffd02519000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f44967e1000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f4496baa000)
+```
 - 七， cmake 常用变量和常用环境变量
 - 八， cmake 常用指令
 - 九， 复杂的例子：模块的使用和自定义模块
