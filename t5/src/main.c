@@ -18,7 +18,7 @@ int main()
 	curl_global_init(CURL_GLOBAL_ALL);
 	CURLcode res;
 	CURL *curl = curl_easy_init();
-	curl_easy_setopt(curl,  CURLOPT_URL, "http: //www.linux- ren. org");
+	curl_easy_setopt(curl,  CURLOPT_URL, "http://www.linux-ren.org");
 	curl_easy_setopt(curl,  CURLOPT_WRITEFUNCTION,  write_data);
 	curl_easy_setopt(curl,  CURLOPT_VERBOSE, 1) ;
 	res = curl_easy_perform(curl);
