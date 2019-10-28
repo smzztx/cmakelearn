@@ -122,25 +122,25 @@ Install the project...
 ```
 - [五， 静态库与动态库构建](t3)
 
-when i add
+when i add  
 `ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
-ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})`
-i get libhello.a
+ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})`  
+I get libhello.a
 
-when i add 
+when i add  
 `ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
 ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})
-SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")`
-i get libhello.a and libhello.so
+SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")`  
+I get libhello.a and libhello.so
 
-when i add 
+when i add  
 `SET(LIBHELLO_SRC hello.c)
 ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
 ADD_LIBRARY(hello_static STATIC ${LIBHELLO_SRC})
 SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")
 SET_TARGET_PROPERTIES(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)`
-i get the same result as 2
+SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)`  
+I get the same result as 2
 - [六， 如何使用外部共享库和头文件](t4)
 ```sh
 #link to libhello.so
