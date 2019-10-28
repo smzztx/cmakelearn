@@ -89,7 +89,7 @@ Now we use our own Math library.
 ## content2
 - 一， 初识 cmake
 - 二， 安装 cmake
-- 三， 初试 cmake – cmake 的 helloworld
+- [三， 初试 cmake – cmake 的 helloworld](t1)
 ```sh
 $ cmake .
 $ make
@@ -99,7 +99,7 @@ $ cd build
 $ cmake ..
 $ make
 ```
-- 四 ， 更好一点的 Hello World
+- [四 ， 更好一点的 Hello World](t2)
 ```sh
 $ mkdir build && cd build
 $ cmake ..
@@ -120,7 +120,7 @@ Install the project...
 -- Installing: /tmp/t2/usr/share/doc/cmake/t2/hello.txt
 
 ```
-- 五， 静态库与动态库构建
+- [五， 静态库与动态库构建](t3)
 
 when i add
 `ADD_LIBRARY(hello SHARED ${LIBHELLO_SRC})
@@ -141,7 +141,7 @@ SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")
 SET_TARGET_PROPERTIES(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)`
 i get the same result as 2
-- 六， 如何使用外部共享库和头文件
+- [六， 如何使用外部共享库和头文件](t4)
 ```sh
 #link to libhello.so
 $ ldd src/main 
@@ -158,7 +158,7 @@ $ ldd src/main
 ```
 - 七， cmake 常用变量和常用环境变量
 - 八， cmake 常用指令
-- 九， 复杂的例子：模块的使用和自定义模块
+- 九， 复杂的例子：模块的使用和自定义模块([t5](t5)、[t6](t6))
 ---------
 [CMake 入门实战](https://www.hahack.com/codes/cmake/)  
 [CMake实践]()
