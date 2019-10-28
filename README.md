@@ -161,4 +161,5 @@ $ ldd src/main
 - 九， 复杂的例子：模块的使用和自定义模块([t5](t5)、[t6](t6))
 ---------
 [CMake 入门实战](https://www.hahack.com/codes/cmake/)  
-[CMake实践]()
+《CMake实践》  
+[CMake官方教程](https://cmake.org/cmake-tutorial/)
